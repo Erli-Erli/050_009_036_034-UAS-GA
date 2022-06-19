@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.Tambah_Lokasi">
+
+    <TextView
+        android:id="@+id/TV_judul"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/read"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:text="TAMBAH LOKASI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/LR_satu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TV_judul"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/ET_USERNAME"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/et_kolom"
+            android:hint="USER NAME"
+            android:paddingStart="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"></EditText>
+
+        <EditText
+            android:id="@+id/ET_NOTELPON"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/et_kolom"
+            android:hint="NO TElPON"
+            android:paddingStart="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/TV_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="LOKASI"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ET_LATITUDE"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_kolom"
+                android:hint="Latitude"
+                android:paddingStart="30dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"></EditText>
+
+            <EditText
+                android:id="@+id/ET_LONGITUDE"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_kolom"
+                android:hint="Latitude"
+                android:paddingStart="30dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LR_LOKASI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:onClick="BTN_MANUAL"
+                android:text="MANUAL"></Button>
+
+            <Button
+                android:id="@+id/BTN_OTOMATIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:text="OTOMATIS">
+
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
