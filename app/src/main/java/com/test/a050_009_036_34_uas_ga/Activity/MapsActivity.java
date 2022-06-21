@@ -1,11 +1,14 @@
 package com.test.a050_009_036_34_uas_ga.Activity;
 
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -29,6 +32,8 @@ import retrofit2.Response;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+
+
     private GoogleMap mMap;
     // private ActivityMapsBinding binding;
     private List<LocationMode> mListMarker = new ArrayList<>();
@@ -37,6 +42,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+
+
 
 //        binding = ActivityMapsBinding.inflate(getLayoutInflater());
 //        setContentView(binding.getRoot());
@@ -59,6 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setMapToolbarEnabled(true);
 
         getAllDataLocationLatLng();
+
     }
 
     private void getAllDataLocationLatLng() {
@@ -83,23 +92,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
     }
-    private void initMarker(List<LocationMode> listData){
+    private void initMarker(List<LocationMode> listData) {
 
-        for(int i=0; i<mListMarker.size(); i++){
+        for (int i = 0; i < mListMarker.size(); i++) {
 
-            LatLng location = new LatLng(Double.parseDouble(mListMarker.get(i).getLatitude()),Double.parseDouble(mListMarker.get(i).getLongitude()));
+            LatLng location = new LatLng(Double.parseDouble(mListMarker.get(i).getLatitude()), Double.parseDouble(mListMarker.get(i).getLongitude()));
 
             mMap.addMarker(new MarkerOptions().position(location).title(mListMarker.get(i).getImageLocationName()));
 
-            LatLng latLng = new LatLng(Double.parseDouble(mListMarker.get(0).getLatitude()),Double.parseDouble(mListMarker.get(0).getLatitude()));
+            LatLng latLng = new LatLng(Double.parseDouble(mListMarker.get(0).getLatitude()), Double.parseDouble(mListMarker.get(0).getLatitude()));
 
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLng.latitude,latLng.longitude), 11.0f));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLng.latitude, latLng.longitude), 11.0f));
         }
 
     }
 
     public void MASUK(View view) {
-        Intent intent = new Intent(MapsActivity.this, Tambah_Lokasi.class);
+        Intent intent = new Intent(MapsActivity.this,Tambah_Lokasi.class);
         startActivity(intent);
     }
 

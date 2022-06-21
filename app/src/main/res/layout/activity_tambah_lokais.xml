@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#E0DECA"
     tools:context=".Activity.Tambah_Lokasi">
 
     <TextView
         android:id="@+id/TV_judul"
-        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="TAMBAH LOKASI"
         android:textColor="@color/read"
         android:textSize="40dp"
-        android:textStyle="bold"
-        android:text="TAMBAH LOKASI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </TextView>
+        android:textStyle="bold"></TextView>
 
     <LinearLayout
         android:id="@+id/LR_satu"
@@ -60,10 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="LOKASI"
+            android:layout_marginTop="40dp"
+            android:text=""
+            android:layout_marginLeft="15dp"
             android:textColor="@color/black"
-            android:textSize="20dp">
+            android:textSize="15dp">
 
         </TextView>
 
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:orientation="horizontal">
 
             <EditText
@@ -111,12 +111,13 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/BTN_MANUAL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:onClick="BTN_MANUAL"
-                android:text="MANUAL"></Button>
+                android:text="INPUT"></Button>
 
             <Button
                 android:id="@+id/BTN_OTOMATIS"
@@ -124,11 +125,19 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:text="OTOMATIS">
+                android:text="LOKASI">
 
             </Button>
 
+
         </LinearLayout>
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/fire_gif"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/fire"
+            android:visibility="invisible" />
 
     </LinearLayout>
 

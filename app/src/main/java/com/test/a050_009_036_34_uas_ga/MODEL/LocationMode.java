@@ -3,7 +3,7 @@ package com.test.a050_009_036_34_uas_ga.MODEL;
 import com.google.gson.annotations.SerializedName;
 
 public class LocationMode {
-    @SerializedName("username")
+    @SerializedName("alamat")
     private String imageLocationName;
     @SerializedName("latitude")
     private String latitude;

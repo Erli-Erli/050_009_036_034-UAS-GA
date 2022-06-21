@@ -3,21 +3,16 @@
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="@color/ijo"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <Button
-            android:text="MASUK"
+            android:text="TAMBAH LAPORAN"
             android:onClick="MASUK"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </Button>
-    </LinearLayout>
 
 
     <fragment
@@ -26,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".JAVA.MapsActivity" />
+
 
 
 </LinearLayout>
