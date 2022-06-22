@@ -28,16 +28,17 @@
 
 
         <EditText
-            android:id="@+id/ET_USERNAME"
+            android:id="@+id/ET_NAMALOKASI"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/et_kolom"
-            android:hint="USER NAME"
+            android:hint="NAMA Lokasi"
             android:paddingStart="30dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"></EditText>
+            android:textColorHint="@color/black">
+        </EditText>
 
         <EditText
             android:id="@+id/ET_NOTELPON"

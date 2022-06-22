@@ -36,7 +36,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Tambah_Lokasi extends AppCompatActivity {
 
-   private EditText un,latitude,longitude,notelpon;
+   private EditText namelokasi,latitude,longitude,notelpon;
    private GifImageView gifImageView;
    TextView tv_address;
    Button otomatis;
@@ -47,7 +47,7 @@ public class Tambah_Lokasi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tambah_lokais);
         locationProviderClient = LocationServices.getFusedLocationProviderClient(Tambah_Lokasi.this);
-        un = (EditText) findViewById(R.id.ET_USERNAME);
+        namelokasi = (EditText) findViewById(R.id.ET_NAMALOKASI);
         latitude = (EditText) findViewById(R.id.ET_LATITUDE);
         longitude = (EditText) findViewById(R.id.ET_LONGITUDE);
         notelpon = (EditText) findViewById(R.id.ET_NOTELPON);
@@ -129,7 +129,8 @@ public class Tambah_Lokasi extends AppCompatActivity {
         //
     }
     public void BTN_MANUAL(View view) {
-        final String username = tv_address.getText().toString().trim();
+        final String username = namelokasi.getText().toString().trim();
+        final String alamat = tv_address.getText().toString().trim();
         final String lt = latitude.getText().toString().trim();
         final String longitudee = longitude.getText().toString().trim();
         final String notelponn = notelpon.getText().toString().trim();
@@ -146,10 +147,12 @@ public class Tambah_Lokasi extends AppCompatActivity {
             @Override
             protected String doInBackground(Void... voids) {
                 HashMap<String,String> params = new HashMap<>();
-                params.put("alamat",username);
+               params.put("nama",username);
+                params.put("alamat",alamat);
                 params.put("latitude",lt);
                 params.put("longitude",longitudee);
                 params.put("notelpon",notelponn);
+                params.put("status","Tervalidasi");
 
                 /// 	nama	latitude	longitude
                 // username,latitude,longitude
