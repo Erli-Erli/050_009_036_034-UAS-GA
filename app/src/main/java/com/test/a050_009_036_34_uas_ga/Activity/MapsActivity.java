@@ -111,4 +111,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent intent = new Intent(MapsActivity.this,Tambah_Lokasi.class);
         startActivity(intent);
     }
+
+    public void refresh(View view){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
 }
